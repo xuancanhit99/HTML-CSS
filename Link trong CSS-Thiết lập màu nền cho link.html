@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Thiết lập màu nền cho Link trong CSS
+Để thiết lập màu nền cho Link, bạn sử dụng thuộc tính background-color trong CSS. Để tìm hiểu các giá trị của thuộc tính này, bạn tham khảo chương Color trong CSS.
+-->
+<html>
+    <head>
+        <title>
+            Thiết lập màu nền cho link trong CSS
+        </title>
+        <style>
+            a:link {
+                background-color: yellow;
+            }
+            a:visited {
+                background-color: cyan;
+            }
+            a:hover {
+                background-color: lightgreen;
+            }
+            a:active {
+                background-color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <p><b><a href="https://www.facebook.com/xuancanhit99" target="_blank">xuancanhit99</a></b></p>
+        <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+        <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+    </body>
+</html>
+
+
+<!--
+Ngoài ra, bạn có thể kết hợp nhiều thuộc tính khác nhau trong CSS để làm cho Link của bạn giống như một Box, hoặc một Button.
+
+Sử dụng ví dụ trên, bạn chỉ cần thay Style Rule:
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+-->

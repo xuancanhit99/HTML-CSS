@@ -1,0 +1,166 @@
+<!--
+Thuộc tính padding cho phép bạn xác định khoảng không gian giữa nội dung hiển thị của một phần tử với đường viền của nó.
+
+Giá trị của thuộc tính padding có thể ở dạng chiều dài (đơn vị px, pt, cm, …) , dạng %, hoặc từ khóa inherit. Nếu giá trị của thuộc tính là inherit, thì phần tử sẽ kế thừa giá trị của thuộc tính padding này từ phần tử cha của nó. Nếu giá trị là dạng %, thì đó là tỉ lệ phần trăm với hộp chứa phần tử này.
+
+Với CSS, bạn không những có thể xác định padding cho toàn bộ phần không gian bao quanh nội dung, mà còn có thể xác định padding cho từng phần không gian này, ví dụ như phần trên, phần dưới, cạnh trái hoặc cạnh phải. Dưới đây là các thuộc tính trong CSS giúp bạn thực hiện việc này:
+
+Thuộc tính padding-bottom xác định phần padding bên dưới của một phần tử.
+
+Thuộc tính padding-top xác định phần padding bên trên của một phần tử.
+
+Thuộc tính padding-left xác định phần padding bên trái của một phần tử.
+
+Thuộc tính padding-right xác định phần padding bên phải của một phần tử.
+
+Thuộc tính padding giúp bạn xác định toàn bộ các thuộc tính trên, tức là có thể xác định toàn bộ phần không gian padding bao quanh một phần tử.
+
+Tiếp theo chúng ta sẽ tìm hiểu chi tiết cách sử dụng từng thuộc tính và giá trị của nó trong CSS.
+
+Thuộc tính padding-bottom trong CSS
+Để xác định phần padding bên dưới của nội dung hiển thị, bạn có thể sử dụng thuộc tính padding-bottom. Thuộc tính này có thể nhận giá trị dưới dạng chiều dài hoặc dạng %. %.
+
+Ví dụ sau minh họa cách sử dụng thuộc tính padding-bottom trong CSS:
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Padding trong CSS</title>
+    </head>
+    <body>
+        <p style="padding-bottom: 15px; border: 1px solid black;">
+            Ví dụ đoạn văn có Bottom Padding đã được xác định bằng giá trị pixel
+        </p>
+        
+        <p style="padding-bottom: 5%; border: 1px solid black;">
+            Ví dụ đoạn văn có Bottom Padding đã được xác định bằng giá trị percent
+        </p>
+        
+        <p style="padding-top: 15px; border: 1px solid black;">
+            Ví dụ đoạn văn có top padding đã được xác định bằng giá trị pixel
+        </p>
+        
+        <p style="padding-top: 5%; border: 1px solid black;">
+            Ví dụ đoạn văn có top padding đã được xác định bằng giá trị percent
+        </p>
+        
+        <p style="padding-left: 15px; border: 1px solid black;">
+            Ví dụ đoạn văn có left padding đã được xác định bằng giá trị pixel
+        </p>
+        
+        <p style="padding-left: 15%; border: 1px solid black;">
+            Ví dụ đoạn văn có left đã được xác định bằng giá trị percent
+        </p>
+        
+        <p style="padding-right: 15px; border:1px solid black;">
+        Vi du doan van co Right Padding da duoc xac dinh bang gia tri pixel
+        </p>
+      
+        <p style="padding-right: 5%; border:1px solid black;">
+        Vi du doan van co Right Padding da duoc xac dinh bang gia tri percent
+        </p>
+    </body>
+</html>
+
+<!--
+Thuộc tính padding trong CSS
+Sử dụng thuộc tính padding giúp bạn viết ít code hơn mà vẫn có thể điều khiển được phần không gian padding xung quanh nội dung hiển thị của một phần tử. Thuộc tính này có thể nhận giá trị dưới dạng chiều dài hoặc dạng %. %.
+
+Tùy theo thứ tự các giá trị bạn xác định trong thuộc tính padding mà các thuộc tính trên sẽ nhận giá trị tương ứng như sau:
+
+Nếu thuộc tính padding có 4 giá trị:
+
+padding: 25px 50px 75px 100px;
+
+phần padding bên trên là 25px
+
+phần padding bên phải là 50px
+
+phần padding bên dưới là 75px
+
+phần padding bên trái là 100px
+
+Nếu thuộc tính padding có 3 giá trị:
+
+padding: 25px 50px 75px;
+
+phần padding bên trên là 25px
+
+phần padding bên phải và trái là 50px
+
+phần padding bên dưới là 75px
+
+Nếu thuộc tính padding có 2 giá trị:
+
+padding: 25px 50px;
+
+phần padding bên trên và dưới là 25px
+
+phần padding bên phải và trái là 50px
+
+Nếu thuộc tính padding có 1 giá trị:
+
+padding: 25px;
+
+cả 4 phần padding trên, dưới, trái và phải đều có giá trị là 25px
+
+Ví dụ sau minh họa cách sử dụng thuộc tính padding trong CSS:
+-->
+
+<html>
+   <head>
+   </head>
+   
+   <body>
+      <p style="padding: 15px; border:1px solid black;">
+      Ca 4 phan Padding deu co gia tri la 15px 
+      </p> 
+      
+      <p style="padding:10px 2%; border:1px solid black;"> 
+      Top va Bottom Padding la 10px, Left va Right Padding se bang 2% tong do rong cua trang. 
+      </p> 
+      
+      <p style="padding: 10px 2% 10px; border:1px solid black;">
+      Top Padding la 10px, Left va Right Padding se bang 2% tong do rong cua trang, Bottom Padding la 10px
+      </p> 
+      
+      <p style="padding: 10px 2% 10px 10px; border:1px solid black;">
+      Top Padding la 10px, Right Padding se bang 2% tong do rong cua trang, Bottom Padding va Top Padding la 10px 
+      </p>
+   </body>
+   
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

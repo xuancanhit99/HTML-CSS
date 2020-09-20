@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Breakout Game by Xuan Canh</title>
+    <meta charset="UTF-8">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+        <style>
+            canvas { background: #D6D6D6; }
+        </style>
+    </head>
+    <body>
+       <canvas id="gameCanvas" width="480" height="320"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("gameCanvas");
+            var ctx = canvas.getContext("2d");
+            var x = canvas.width / 2;
+            var y = canvas.height - 30;
+            var dx =2;
+            var dy =-2;
+            var ballRadius = 10;
+            var paddleWidth = 80;
+            var paddleHeight = 10;
+            var paddleX = (canvas.width - paddleWidth) / 2;
+            var rightPress = false;
+            var leftPress = false;
+            //The bricks-Viên gạch
+            var brickRow = 3;
+            var brickCol = 5;
+            var brickWidth = 75;
+            var brickHeight = 20;
+            var brickPadding = 10;
+            var brickOffsetTop = 30;
+            var brickOffsetLeft = 30;
+            var score = 0;
+            
+            
+            var bricks = [];
+            for (c=0; c < brickCol; c++) {
+                bricks[c] = [];
+                for (r = 0; r < brickRow; r++) {
+                    bricks[c][r] = {x: 0, y:0, status: 1};
+                }
+            }
+            
+            document.addEventListener("keydown", keyDown, false);
+            document.addEventListener("keyup", keyUp, false);
+            document.addEventListener("mousemove", mouseMove, false);
+            
+            //Chuột
+            function mouseMove(event) {
+                var relativeX = event.clientX - canvas.offsetLeft;
+                if (relativeX > 0 && relativeX < canvas.width) {
+                    paddleX = relativeX - paddleX / 2;
+                }
+            }
+            
+            function keyDown(event) {
+                if (event.keyCode == 39) {
+                    rightPress = true;
+                } else if (event.keyCode == 37) {
+                    leftPress = true;
+                }
+            }
+            
+            function keyUp(event) {
+                if (event.keyCode == 39) {
+                    rightPress =false;
+                } else if (event.keyCode == 37) {
+                    leftPress = false;
+                }
+            }
+            
+            
+            //Vẽ điểm trên màn hình
+            function drawScore() {
+                ctx.font = "18px Tahoma";
+                ctx.fillStyle = "#D9166D";
+                ctx.fillText("Score: " + score, 10, 20)
+            }
+            
+            
+            //Xử lí va chạm
+            function collision() {
+                for(c=0; c<brickCol; c++) {
+                    for(r=0; r<brickRow; r++) {
+                        var b = bricks[c][r];
+                        
+                        if(b.status == 1){
+                                if(x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+                                dy = -dy;
+                                b.status = 0;
+                                score++;
+                                    
+                                if (score == brickCol*brickRow) {
+                                    alert("A đù Thắng rồi");
+                                    document.location.reload();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //Vẽ gạch
+            function drawBricks() {
+                for (c = 0; c < brickCol; c++) {
+                    for (r = 0; r < brickRow; r++) {
+                        
+                        if (bricks[c][r].status == 1) {
+                            var brickX = (c*(brickWidth+brickPadding)) + brickOffsetLeft;
+                            var brickY = (r*(brickHeight+brickPadding)) + brickOffsetTop;
+
+                            //Bật cửa sổ kiểm tra
+                            console.log(brickX + ' ' + brickY);
+
+                            bricks[c][r].x = brickX;
+                            bricks[c][r].y = brickY;
+                            ctx.beginPath();
+                            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                            ctx.fillStyle = "#1E95BD";
+                            ctx.fill();
+                            ctx.closePath();
+                        }
+                    }
+                }
+            }
+            
+            
+            function drawBall() {
+                ctx.beginPath()
+                ctx.arc(x, y, ballRadius, 0, Math.PI*2, false);
+                ctx.fillStyle="#1E95BD";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            
+            function drawPaddle() {
+                ctx.beginPath();
+                ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight)
+                ctx.fillStyle="#1E95BD";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBricks();
+                drawBall();
+                drawPaddle();
+                drawScore();
+                collision();
+                
+                if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+                    dx = -dx;
+                }
+                if (y + dy < ballRadius) {
+                    dy = -dy;
+                } else {
+                    if (y + dy > canvas.height - ballRadius) {
+                        if (x > paddleX && x < paddleX + paddleWidth) {
+                            dy = -dy;
+                        } else {
+                            // Game Over
+                            alert("Con gà này!!! Thua rồi.");
+                            document.location.reload();
+                        }
+                    }
+                }
+                
+                if(rightPress && paddleX < canvas.width - paddleWidth) {
+                    paddleX += 5;
+                }
+                if(leftPress && paddleX >0) {
+                    paddleX -= 5;
+                }
+                x += dx;
+                y += dy;
+                
+            }
+           setInterval(draw, 5); 
+        </script>
+        
+    </body>
+</html>
+
+
+
+
+
+
+//Bài 56 
+

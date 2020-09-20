@@ -1,0 +1,44 @@
+<!-- Cho phép thêm padding và border vào total width và height của 1 element
+box-sizing: border-box; -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is a Web Page
+        </title>
+        <meta charset="utf-8">
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <style>
+            * {
+                box-sizing: border-box; /*Sử dụng box-sizing cho tất cả thành phần*/
+            }
+            div.small {
+                border: 1px solid blue;
+                width: 300px;
+                height: 100px;
+                box-sizing: border-box;
+            }
+            div.big {
+                border: 1px solid green;
+                width: 300px;
+                height: 100px;
+                padding: 40px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    
+    <body>
+       <div class="small">
+            This div is small(width=300px height=100px)
+        </div>
+        <br>
+        <br>
+        <div class="big">
+            This div is big(width=300px height=100px)
+        </div>
+         
+    </body>
+</html>

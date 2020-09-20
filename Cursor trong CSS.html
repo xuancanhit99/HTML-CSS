@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Thuộc tính cursor trong CSS giúp bạn xác định kiểu con trỏ hiển thị tới người dùng.
+
+Một cách sử dụng phổ biến của thuộc tính này là sử dụng các hình ảnh làm con trỏ hiển thị trong các nút submit trên các form. Theo mặc định, khi con trỏ hover qua một link, thì con trỏ chuột thay đổi từ dạnh con trỏ thành hình dạng một bàn tay.
+
+Bảng dưới đây liệt kê các giá trị mà thuộc tính cursor có thể nhận:−
+
+Giá trị	Miêu tả
+auto	Hình dáng của con trỏ phụ thuộc vào context mà nó di chuyển qua. Ví dụ, dạng một chữ I khi di chuyển qua văn bản hay một bàn tay khi di chuyển qua một link, ….
+crosshair	Dạng crosshair hoặc dấu cộng
+default	Một mũi tên
+pointer	Hình dạng một bàn tay
+move	Thanh I
+e-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+ne-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+nw-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+n-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+se-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+sw-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+s-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+w-resize	Hình dáng con trỏ hiển thị rằng khi con trỏ chuột di chuyển vào cạnh của một hộp thì người dùng có thể kéo để thay đổi kích cỡ hộp
+text	Thanh I
+wait	Hình dáng giống chiêc đồng hồ cát, chỉ rằng đang chờ xử lý
+help	Một dấu chấm hỏi (?), sử dụng giá trị này cho các nút Help
+<url>	Nguồn tới file chứa hình ảnh con trỏ
+QUẢNG CÁO
+Ghi chú: Bạn nên thực hành với từng giá trị thuộc tính trên để đỡ nhầm lần trong khi sử dụng và cũng giúp cho bạn hiển thị hình dáng con trỏ chuột thích hợp tới người sử dụng. Chẳng hạn, nếu một người sử dụng di chuyển chuột vào một link, bạn lại hiển thị con trỏ chuột dạng đồng hồ cát mà biểu thị rằng đang chờ xử lý, thì đó là sự nhầm lẫn khá khôi hài.
+
+Dưới đây là ví dụ minh họa cách sử dụng các giá trị của thuộc tính cursor trong CSS.
+-->
+<html>
+    <head><title>Con trỏ trong CSS</title></head>
+    <body>
+        <p>Di chuyển con trỏ chuột qua các phần text sau để thấy các hình dạng con trỏ khác nhau</p>
+        
+        <div style="cursor: auto">Giá trị auto(tự động theo ngữ cảnh)</div>
+        <div style="cursor: crosshair">Giá trị crosshair(dạng crosshair hoặc dấu cộng)</div>
+        <div style="cursor: default">Giá trị default(một mũi tên)</div>
+        <div style="cursor: pointer">Giá trị pointer(hình dạng một bàn tay</div>
+        <div style="cursor: move">Giá trị move(mũi tên 4 hướng)</div>
+        <div style="cursor: e-resize">Giá trị e-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: ne-resize">Giá trị ne-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: nw-resize">Giá trị nw-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: n-resize">Giá trị n-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: se-resize">Giá trị se-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: sw-resize">Giá trị sw-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: s-resize">Giá trị s-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: w-resize">Giá trị w-resize(hình dạng thay đổi kích cỡ)</div>
+        <div style="cursor: text">Giá trị text(thanh I)</div>
+        <div style="cursor: wait">Giá trị wait(chiếc đồng hồ cát hoặc chờ xử lý)</div>
+        <div style="cursor: help">Giá trị help(Một dấu chẩm hỏi(?), sử dụng giá trị này cho nút help)</div>
+    </body>
+</html>

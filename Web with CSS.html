@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My website
+        </title>
+        <meta http-equiv="refresh" content="10"> <!--3s refresh web 1 lần-->
+        <meta  http-equiv="content-type" content="text/html"; charset="UTF-8"> <!--Bộ kí tự sử dụng trong web(Tiếng Việt: UTF-8)-->
+        <link href="CSS/styleweb.css" rel="stylesheet" media="screen,print" />
+    </head>
+    <body>
+        <div id="layout">
+        
+        
+        <div id="header"> <!--1.Phần header-->
+        <!--Thuộc tính id để phân biệt nội dung phần tử-->
+            <div class="hLeft"><!--Thuộc tính class để nhóm các phần tử(bên trái) và định dang chung theo CSS-->
+                <h1>
+                    <img src="images/img_logo.gif" alt="LogoComment" /> <!--alt: comment khi ảnh không hiện-->
+                </h1>
+                <p>www.facebook.com/xuancanhit99</p>
+            </div><!--/ class hleft-->
+
+            <div class="hRight">
+                <ul class="hButton">
+                    <li><a href="#"><img src="images/btn_name01.gif" alt="Button01"></a></li> <!--Thẻ a: tuỳ chọn có thể click vào phần tử(tạo liên kết)-->
+                    <li class="last"><a href="#"><img src="images/btn_name02.gif" alt="Button02"></a></li> <!--href: chuyển hướng khi click-->
+                </ul>
+
+                <ul class="hNav">
+                    <li><a href="#">Link 01</a></li>
+                    <li><a href="#">Link 02</a></li>
+                    <li><a href="#">Link 03</a></li>
+                    <li class="last"><a href="#">Link 04</a></li>
+                </ul>
+            </div><!--/class hRight-->
+        </div><!--/id header-->
+            
+                       
+        <div id="gNav"><!--2.Phần Global navigation-->
+            <ul>
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">SẢN PHẨM</a></li>
+                <li><a href="#">DỊCH VỤ</a></li>
+                <li class="last"><a href="#">LIÊN HẸ</a></li>
+            </ul>
+        </div><!--/id gNav-->
+        
+        
+        <div id="pageBody"><!--3.PageBody-->
+            <div id="content"><!--3.1.Phần content-->
+                <h2>Sản phẩm mới</h2>
+                <div class="newProduct">
+                    <p><img src="images/img_products_new01.jpg" alt="cmsanphammoi" /></p>
+                <div>
+                <h3>Tên sản phẩm</h3>
+                <p>Text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm.</p>
+                </div>
+                </div><!--/class newProduct-->
+
+                <ul class="thumbList">
+                    <li><a href="#"></a> <img src="images/img_products01.jpg" alt="" /></li>
+                    <li><a href="#"></a> <img src="images/img_products02.jpg" alt="" /></li>
+                    <li><a href="#"></a> <img src="images/img_products03.jpg" alt="" /></li>
+                    <li><a href="#"></a> <img src="images/img_products04.jpg" alt="" /></li>
+                    <li><a href="#"></a> <img src="images/img_products05.jpg" alt="" /></li>
+                    <li class="last"><a href="#"></a> <img src="images/img_products06.jpg" alt="" /></li>
+                </ul>
+
+                <h2>Tin tức</h2>
+                <dl class="news">
+                    <dt>20/07/2019</dt>
+                    <dd><a href="#">Tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới</a></dd>
+
+                    <dt>20/07/2019</dt>
+                    <dd><a href="#">Tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới</a></dd>
+
+                    <dt>20/07/2019</dt>
+                    <dd class="last"><a href="#">Tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới</a></dd>
+                </dl>
+
+                <p class="banner"><a href="#"><img src="images/bnr_name01.gif" alt="" /></a></p>
+            </div><!--/id content-->
+        
+        
+            <div id="sidebar"><!--3.2.Phần sidebar-->
+                <h2>Link liên quan</h2>
+                <ul class="linkList">
+                    <li><a href="#">Link liên quan 01</a></li>
+                    <li><a href="#">Link liên quan 02</a></li>
+                    <li><a href="#">Link liên quan 03</a></li>
+                    <li><a href="#">Link liên quan 04</a></li>
+                    <li><a href="#">Link liên quan 05</a></li>
+                    <li class="last"><a href="#">Link liên quan 06</a></li>
+                </ul>
+                
+                <h2>Link liên quan</h2>
+                <ul class="bannerList">
+                    <li><a href="#"><img src="images/bnr_name02.gif" alt="" /></a></li>
+                    <li><a href="#"><img src="images/bnr_name03.gif" alt="" /></a></li>
+                    <li class="last"><a href="#"><img src="images/bnr_name04.gif" alt="" /></a></li>
+                </ul>    
+            </div>
+        </div><!--/id pageBody-->
+        
+        
+        
+        <div id="footer"><!--4.Phần footer-->
+            <div class="fLeft">
+                <p>TÊN CÔNG TY</p>
+                <p>Địa chỉ: 123 abc, Xã X, Huyện Y, Thành Phố Z<br />
+                    Điện thoại: 0393337555</p>
+                <p>Email: <a href="mailto:xuancanhit99@gmail.com?subject=Feedback&body=Message">xuancanhit99@gmail.com</a></p>
+            </div><!--/class fLeft-->
+            
+            <div class="fRight">
+                <ul>
+                    <li><a href="#">Link 01</a></li>
+                    <li><a href="#">Link 02</a></li>
+                    <li><a href="#">Link 03</a></li>
+                    <li class="last"><a href="#">Link 04</a></li>
+                </ul>
+                <p>Copyright (c) 2019 XuanCanh</p>
+            </div><!--/class fRight-->
+        </div><!--/id footer-->
+        </div><!--/id Lay out-->
+    </body>
+</html>
+<!--hướng dẫn https://hocwebchuan.com/-->
+
+
+

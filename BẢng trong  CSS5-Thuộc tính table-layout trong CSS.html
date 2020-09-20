@@ -1,0 +1,44 @@
+<!--
+Thuộc tính table-layout trong CSS
+Thuộc tính table-layout hỗ trợ bạn điều khiển cách mà trình duyệt nên tạo layout cho một bảng.
+
+Thuộc tính này có thể nhận một trong ba giá trị: fixed, auto hoặc inherit.
+
+Dưới đây là ví dụ minh họa sự khác nhau giữa các giá trị của thuộc tính table-layout này.
+
+Ghi chú: Nhiều trình duyệt không hỗ trợ thuộc tính này.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Thuộc tính table-layout trong CSS
+        </title>
+        <style type="text/css">
+            table.auto {
+                table-layout: auto;
+            }
+            table.fixed {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="auto" border="1" width="100%"> <!-- để auto thì sẽ không theo % nữa mà tự động điều chỉnh để phù hợp-->
+            <tr>
+                <td width="20%">1000000000000000000000000000</td>
+                <td width="40% ">10000000000</td>
+                <td width="40%">100</td>
+            </tr>
+        </table>
+        <br />
+        
+        <table class="fixed" border="1" width="100%"><!--Bắt buộc theo tỉ lệ đã đề ra, mặc kệ bị đè-->
+            <tr>
+                <td width="20%">1000000000000000000000000000</td>
+                <td width="40%">10000000000</td>
+                <td width="40%">100</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!--Cho phép translate, rolate, scale, skew elements-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is a Web Page
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <meta charset="utf-8">
+        <!--[if lt IE 9 ]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <style>
+            div.transform {
+                background: green;
+                color: blue;
+                padding: 20px;
+                width: 150px;
+                /*Sử dụng đồng thời 3 dòng sau để hiển thị trên tất cả trình duyệt*/
+                transform: translate(50px ,100px);
+                -ms-transform: translate(50px ,100px);/*ie9*/
+                -webkit-transform: translate(50px ,100px); /*safari*/
+                
+                
+            }
+            
+            div.rolate {
+                background: green;
+                color: blue;
+                padding: 20px;
+                width: 150px;
+                /*Sử dụng đồng thời 3 dòng sau để hiển thị trên tất cả trình duyệt*/
+                transform: rotate(20deg);
+                -ms-transform: rotate(20deg) ;/*ie9*/
+                -webkit-transform: rotate(20deg); /*safari*/
+            }
+            
+            div.scale {
+                background: green;
+                color: blue;
+                padding: 20px;
+                width: 150px;
+                /*Sử dụng đồng thời 3 dòng sau để hiển thị trên tất cả trình duyệt*/
+                transform: scale(0.5, 0.5);
+                -ms-transform: scale(0.5, 0.5) ;/*ie9*/
+                -webkit-transform: scale(0.5, 0.5); /*safari*/
+            }
+            div.skew {
+                background: green;
+                color: blue;
+                padding: 20px;
+                width: 150px;
+                /*Sử dụng đồng thời 3 dòng sau để hiển thị trên tất cả trình duyệt*/
+                transform: skewX(20deg);
+                -ms-transform: skewX(20deg) ;/*ie9*/
+                -webkit-transform: skewX(20deg); /*safari*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="transform">This is a translate</div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <div class="rolate">This is a rolate</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="scale">This is a scale</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="skew">This is a skew</div>
+    </body>
+    
+    
+</html>

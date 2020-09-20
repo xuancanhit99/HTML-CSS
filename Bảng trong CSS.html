@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Bảng là một công cụ hiển thị dữ liệu rõ ràng và hiệu quả. Mặc dù với các công nghệ mới (như Kendo UI), thì việc hiển thị dữ liệu bằng các thẻ div thường được sử dụng hơn. Tuy nhiên, với các ứng dụng Webpage nhỏ và với lượng dữ liệu hiển thị là không lớn thì sử dụng bảng là khá tiện lợi. Chương này sẽ trình bày cách sử dụng các thuộc tính khác nhau trong CSS để làm cho bảng của bạn đẹp hơn.
+
+Dưới đây là một số thuộc tính trong CSS:
+
+Thuộc tính border được sử dụng để thiết lập đường viền cho bảng.
+
+Thuộc tính border-collapse xác định rằng các đường viền của bảng nên được vào hợp thành một đường viền.
+
+Thuộc tính caption-side được sử dụng trong phần tử <caption>. Theo mặc định, chúng sẽ được hiển thị ở phần bên trên của bảng. Sử dụng thuộc tính này, bạn có thể xác định vị trí hiển thị của phần tử caption này.
+
+Thuộc tính empty-cells xác định xem có hiển thị đường viền không nếu một ô là trống.
+
+Thuộc tính table-layout cho phép bạn thiết lập layout cho bảng.
+
+Thuộc tính border-collapse trong CSS
+Thuộc tính này có hai giá trị collapse và separate tương ứng với các đường viền nên được kết hợp với nhau hoặc phân biệt riêng rẽ. Ví dụ:
+-->
+<html>
+    <head>
+        <style type="text/css">
+            table.one {border-collapse: collapse;}
+            table.two {border-collapse: separate;}
+            td.a {
+                border-style: dotted;
+                border-width: 3px;
+                border-color: #000000;
+                padding: 10px;
+            }
+            td.b {
+                border-style: solid;
+                border-width: 3px;
+                border-color: #333333;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="one">
+            <caption>Ví dụ giá trị collapse</caption>
+            <tr><td class="a">Cell A</td></tr>
+            <tr><td class="b">Cell B</td></tr>
+        </table>
+        <br />
+        
+        <table class="two">
+            <caption>Ví dụ giá trị separate</caption>
+            <tr><td class="a">Cell A</td></tr>
+            <tr><td class="b">Cell B</td></tr>
+        </table>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

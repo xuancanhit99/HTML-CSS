@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Bảng trong HTML
+        </title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td> Row 1, Column 1 </td>
+                <td> Row 1, Column 2 </td>
+            </tr>
+            <tr>
+                <td> Row 2, Column 1 </td>
+                <td> Row 2, Column 2 </td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</html>
+
+
+
+
+<html>
+    <head>
+        <title>
+            Tiêu đề bảng
+        </title>
+    </head>
+    <body>
+        <table border="1">
+           <tr>
+               <th>Ten Nhan Vien</th>
+               <th>Luong</th>
+           </tr>
+            <tr>
+                <td> Xuan Canh </td>
+                <td> 6000 </td>
+            </tr>
+            <tr>
+                <td> Hong Nhung </td>
+                <td> 3000 </td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</html>
+
+
+<html>
+    <head>
+        <title>
+            Hai thuoc tinh cellpadding va cellspacing
+        </title>
+    </head>
+    <body>
+        <table border="1" cellpadding="5" cellspacing="5">
+           <tr>
+               <th>Ten Nhan Vien</th>
+               <th>Luong</th>
+           </tr>
+            <tr>
+                <td> Xuan Canh </td>
+                <td> 6000 </td>
+            </tr>
+            <tr>
+                <td> Hong Nhung </td>
+                <td> 3000 </td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</html>
+
+
+
+<html>
+    <head>
+        <title>
+            Vi du thuoc tinh colspan va rowspan
+        </title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Row 1 cell 1</td>
+                <td>Row 1 cell 2</td>
+                <td>Row 1 cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2 cell 2</td>
+                <td>Row 2 cell 3</td>
+            </tr>
+            <tr>
+                <td colspan="3">Row 3 cell 1</td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</html>
+
+
+
+<html>
+    <head>
+        <title>
+            Vi du set mau, nen cho bang
+        </title>
+    </head>
+    <body>
+        <table border="1" bordercolor="green" bgcolor="yellow">
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Row 1 cell1</td>
+                <td>Row 1 cell 2</td>
+                <td>Row 1 cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2 cell 2</td>
+                <td>Row 2 cell 3</td>
+            </tr>
+            <tr>
+                <td colspan="3">Row 3 cell 1</td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</html>
+
+
+<html>
+    <head>
+        <title>
+            Vi du tao background cho bang
+        </title>
+    </head>
+    <body>
+        <table border="1" bordercolor="green" background="IMG_20190516_123435.jpg">
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Row 1 cell1</td>
+                <td>Row 1 cell 2</td>
+                <td>Row 1 cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2 cell 2</td>
+                <td>Row 2 cell 3</td>
+            </tr>
+            <tr>
+                <td colspan="3">Row 3 cell 1</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
+<htmL>
+    <head>
+        <title>
+            Thiet lap do cao chieu rong cua bang
+        </title>
+    </head>
+    <body>
+        <table border="1" width="400" height="150">
+            <tr>
+                <td>Row 1, column 1</td>
+                <td>Row 2, column 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, column 1</td>
+                <td>Row 2, column 2</td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</htmL>
+
+
+
+<html>
+    <head>
+        <title>
+            Vi du phu de bang
+        </title>
+    </head>
+    <body>
+        <table border="1" width="100%">
+            <caption>Vi du phu de bang</caption>
+            <tr>
+                <td>Row 1, column 1</td>
+                <td>Row 1, colomn 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, column 1</td>
+                <td>Row 2, column 2</td>
+            </tr>
+        </table>
+        <br />
+    </body>
+</html>
+
+
+
+<html>
+    <head>
+        <title>
+            Vi du bang
+        </title>
+    </head>
+    <body>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <td colspan="4">Day la phan tieu de bang</td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Day la phan chan bang</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
+<htmL>
+    <head>
+        <title>Vi du bang long bang</title>
+    </head>
+    <body>
+        <table border="1" width="100%">
+            <tr>
+                <td>
+                    <table border="1" width="100%">
+                        <tr>
+                            <th>Ten Nhan vien</th>
+                            <th>Luong</th>
+                        </tr>
+                        <tr>
+                            <td>Xuan Canh</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td>Hong Nhung</td>
+                            <td>6000</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</htmL>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!--
+Độ rộng và chiều cao bảng trong CSS
+Để xác định độ rộng và chiều cao cho bảng, bạn sử dụng hai thuộc tính width và height trong CSS. Hai thuộc tính này có thể nhận các giá trị là % hoặc px.
+
+Ví dụ
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+Căn chỉnh bảng trong CSS
+Căn chỉnh bảng theo chiều ngang trong CSS
+Bạn sử dụng thuộc tính text-align để xác định sự căn chỉnh nội dung theo chiều ngang của bảng. Thuộc tính này có thể nhận các giá trị left, right hoặc center. Ví dụ:
+
+th {
+    text-align: left;
+}
+Căn chỉnh bảng theo chiều dọc trong CSS
+Để căn chỉnh bảng theo chiều dọc, bạn sử dụng thuộc tính vertical-align có thể nhận các giá trị top, bottom, middle. Theo mặc định thì nội dung của bảng có căn chỉnh dọc với giá trị middle. Ví dụ:
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+Thuộc tính padding trong CSS
+Để điều khiển khoảng cách giữa đường viền và nội dung của bảng, bạn sử dụng thuộc tính padding trong CSS. Giá trị có thể nhận của thuộc tính này là ở dưới dạng đơn vị px.
+
+Ví dụ
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+-->
+<!--
+Thuộc tính border-spacing trong CSS
+Thuộc tính border-spacing xác định khoảng cách giữa các đường viền của các ô trong bảng. Thuộc tính này có thể nhận một hoặc hai giá trị (có đơn vị là độ dài).
+
+Nếu cung cấp một giá trị, thì giá trị này sẽ được áp dụng cho đường viền ngang và dọc. Nếu cung cấp hai giá trị, thì tương ứng theo thứ tự sẽ áp dụng cho đường viền ngang và đường viền dọc.
+
+Ghi chú Thuộc tính này không làm việc trong Netscape 7 và IE6.
+<style type="text/css">
+   /* If you provide one value */
+   table.example {border-spacing:10px;}
+   /* This is how you can provide two values */
+   table.example {border-spacing:10px; 15px;}
+</style>
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            table.one {
+                border-collapse: separate;
+                width: 400px;
+                border-spacing: 10px;
+            }
+            table.two {
+                border-collapse: separate;
+                width: 400px;
+                border-spacing: 10px 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="one" border="1">
+            <caption>Ví dụ giá trị separate và border-spacing</caption>
+            <tr><td>Cell A</td></tr>
+            <tr><td>Cell B</td></tr>
+        </table>
+        <br />
+        <table class="two" border="1">
+            <caption>Ví dụ giá trị separate và border-spacing</caption>
+            <tr><td>Cell A</td></tr>
+            <tr><td>Cell B</td></tr>
+        </table>
+    </body>
+</html>

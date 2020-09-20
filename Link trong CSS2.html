@@ -1,0 +1,32 @@
+<!--
+Ngoài ra, để thiết lập các trạng thái khác nhau cho link, bạn có thể sử dụng các thuộc tính:
+
+Trạng thái :link – biểu thị rằng trang web này trình duyệt chưa lưu (tức người sử dụng lần đầu tiên click vào đường dẫn này).
+
+Trạng thái :visited – biểu thị rằng đường dẫn tới trang web này đã được lưu bởi trình duyệt (tức là người sử dụng đã click vào đường dẫn này trước đó rồi).
+
+Trạng thái :hover – biểu thị rằng khi người sử dụng di chuyển chuột qua phần tử mà chứa link đó (tức là phần tử đó là một link khi người sử dụng di chuyển chuột qua phần tử đó).
+
+Trạng thái :active – biểu thị đường link là active khi người sử dụng click chuột vào.
+
+Ghi chú:
+
+Trạng thái :hover PHẢI theo sau các trạng thái :link và :visited trong định nghĩa CSS thì mới có hoạt động. Nếu thiếu một trong hai trạng thái trên, thì các Style Rule bạn đã định nghĩa cho :hover sẽ không có giá trị.
+
+Trạng thái :active PHẢI theo sau trạng thái :hover trong định nghĩa CSS.
+-->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style type="text/css">
+            a:link {color: #000000}
+            a:visited {color: #006600}
+            a:hover {color: #FFCC00}
+            a:active {color: #FF00CC}
+        </style>
+    </head>
+    <body>
+        <p><a href="https:/www.facebook.com/xuancanhit99" target="_blank">Link đổi màu</a></p>
+    </body>
+</html>

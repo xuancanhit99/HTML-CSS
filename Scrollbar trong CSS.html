@@ -1,0 +1,51 @@
+<!--
+Đôi khi bạn gặp trường hợp mà phải hiển thị một lượng nội dung lớn hơn nhiều phần không gian được cấp phát cho nó. Chương này sẽ trình bày cách xử lý vấn đề này.
+
+CSS cung cấp thuộc tính overflow để nói cho trình duyệt điều gì cần phải làm nếu nội dung hiển thị của một hộp lớn hơn nhiều phần không gian đã cấp cho hộp đó. Thuộc tính này có thể nhận một trong các giá trị sau:
+
+Giá trị	Miêu tả
+visible	Cho phép nội dung có thể tràn qua các đường viền của phần tử chứa nó
+hidden	Phần nội dung sẽ bị cắt tại cạnh đường viền và sẽ không có thanh cuốn (scrollbar) nào được hiển thị
+scroll	Kích cỡ của phần tử chứa không thay đổi, nhưng hiển thị (hay thêm vào) các thanh cuốn (scrollbar) để cho phép người dùng thực hiện thao tác scroll để xem hết phần nội dung
+auto	Tương tự như giá trị scroll, nhưng thanh cuốn (scrollbar) sẽ chỉ được hiển thị nếu kích cỡ của nội dung lớn hơn không gian hộp hiển thị và bị tràn
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrollbar trong CSS</title>
+    </head>
+        <style type="text/css" media="all">
+            .scroll{
+                display: block;
+                border: 1px solid red;
+                padding: 5px;
+                margin-top: 5px;
+                width: 300px;
+                height: 50px;
+                overflow: scroll;
+            }
+            .auto{
+                display: block;
+                border: 1px solid red;
+                padding: 5px;
+                margin-top: 5px;
+                width: 300px;
+                height: 50px;
+                overflow: auto;
+            }
+        </style>
+    
+    <body>
+        <p>Ví dụ giá trị scroll của thuộc tính overflow trong CSS</p>
+        <div class="scroll">
+            Trả lời báo chí đầu tháng, Phó chủ tịch thường trực VFF Trấn Quốc Tuấn và HLV Nguyễn Hữu Thắng từng đề cập tới khả năng nở cửa cho cầu thủ nhập tịch lên tuyến. Theo ông Trần Quốc Tuấn, những cầu thủ này nếu đáp ứng được yêu cầu về chuyên môn do HLV Nguyễn Hữu Thắng đặt rất hi đều có khả năng lên tuyến
+        </div>
+        <br />
+        
+        <p> Ví dụ giá trị auto của thuộc tính overflow trong CSS</p>
+        
+        <div class="auto">
+            Trả lời báo chí đầu tháng, Phó chủ tịch thường trực VFF Trấn Quốc Tuấn và HLV Nguyễn Hữu Thắng từng đề cập tới khả năng nở cửa cho cầu thủ nhập tịch lên tuyến. Theo ông Trần Quốc Tuấn, những cầu thủ này nếu đáp ứng được yêu cầu về chuyên môn do HLV Nguyễn Hữu Thắng đặt rất hi đều có khả năng lên tuyến
+        </div>
+    </body>
+</html>

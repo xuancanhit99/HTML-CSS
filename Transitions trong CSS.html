@@ -1,0 +1,42 @@
+<!-- Thay đổi thuộc tính một các mượt mà 
+Cách thực hiện:
+    CSS property
+    Duration
+Delay
+Transiton+Transformation-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is a Web Page
+        </title>
+        <meta charset="utf-8">
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <style>
+            div {
+                background: green;
+                color: #fff;
+                padding: 20px;
+                width: 150px;
+                height: 100px;
+                transition: width 2s, height 2s, -webkit-transform 2s;
+                -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+                transition-timing-function: ease; /*tuỳ chỉnh các hiệu úng khác nhau*/
+                /*transition-delay: 2s;
+                -webkit-transition-delay: 2s;*/
+                
+            }
+            div:hover {
+                width: 300px;
+                /*height: 200px;*/
+                transform: rotate(360deg);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>The div element</div>
+    </body>
+</html>

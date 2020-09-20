@@ -1,0 +1,69 @@
+<!DOCTYOE html>
+<html>
+    <head>
+        <title>
+            This is a Web Page
+        </title>
+        <meta charset="utf-8">
+        <style>
+            div.static1 {
+                position: relative;
+                left: 100px;
+                top: 100px;
+                border: 3px solid #73ad21;
+            }
+            
+            div.static2 {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                border: 3px solid black;
+            }
+            
+            
+            div.relative {
+                position: relative;
+                width: 500px;
+                height: 200px;
+                border: 3px solid black;
+            }
+            
+            div.absolute {
+                position: absolute;
+                right: 10px;
+                bottom: 20px;
+                border: 3px solid black;
+                
+            }
+            
+            div.a {
+                width: 500px;
+                height: 100px;
+                /*overflow: scroll;           hidden;         mặc định là: visible;*/
+                overflow-x: auto;
+                overflow-y: scroll;
+                 /*để tuỳ chỉnh thanh cuộn*/
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="static1">
+            The &lt;div&gt; element is a block-level element
+        </div>
+        <div class="static2">
+            The &lt;div&gt; element is a block-level element
+        </div>
+        <div class="relative">
+           Has position relative
+            <div class="absolute">
+                Has position absolute
+            </div>
+        </div>
+        
+        <div class="a">
+            This is over flow.This is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flowThis is over flow
+            
+        </div>
+    </body>
+</html>

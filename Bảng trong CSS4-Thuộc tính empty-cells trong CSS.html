@@ -1,0 +1,49 @@
+<!--
+Thuộc tính empty-cells trong CSS
+Để xác định xem có nên hiển thị đường viền cho một ô không có nội dung, bạn có thể sử dụng thuộc tính empty-cells trong CSS.
+
+Thuộc tính này có thể nhận một trong các giá trị: show, hide hoặc inherit.
+
+Dưới đây là ví dụ minh họa để ẩn đường viền với ô mà không có nội dung.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thuộc tính empty-cells trong CSS</title>
+        <style type="text/css">
+            table.empty {
+                width: 350px;
+                border-collapse: separate;
+                empty-cells: hide
+            }
+            td.empty {
+                padding: 5px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #999999;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="empty">
+            <tr>
+                <th></th>
+                <th>Đầu đề cho cột</th>
+                <th>Đầu đề cho cột</th>
+            </tr>
+            
+            <tr>
+                <th>Đầu đề cho hàng</th>
+                <td class="empty">Giá trị</td>
+                <td class="empty">Giá trị</td>
+            </tr>
+            
+            <tr>
+                <th>Đầu đề cho hàng</th>
+                <td class="empty">Giá trị</td>
+                <td class="empty"></td>
+            </tr>
+        </table>
+    </body>
+    
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is a Web Page
+        </title>
+        <meta charset="utf-8">
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <style>
+            @keyframes example1 {
+                from {
+                    background-color: green;
+                }
+                to {
+                    background-color: red;
+                }
+            }
+            
+            @keyframes example2 {
+                0% {
+                    background-color: green;
+                    left: 0px;
+                    top: 0;
+                }
+                25% {
+                    background-color: yellow;
+                    left: 200px;
+                    top: 0px;
+                }
+                50% {
+                    background-color: blue;
+                    left: 200;
+                    top: 200px;
+                }
+                100% {
+                    background-color: red;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+            
+            div.ex1 {
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                background-color: green;
+                animation-name: example1;
+                animation-duration: 4s;
+            }
+            
+            div.ex2 {
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                background-color: pink;
+                animation-name: example2;
+                animation-duration: 5s;
+                animation-delay: 2s;
+                position: relative;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="ex1">The div element</div>
+        <br><br>
+        <div class="ex2">The div element 2</div>
+    </body>
+</html>

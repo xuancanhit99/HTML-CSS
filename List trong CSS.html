@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Trình bày hay liệt kê một danh sách có kèm theo các bullet hoặc dưới dạng đánh số giúp phần văn bản của bạn dễ đọc và tạo cảm giác thân thiện hơn. Để tạo style riêng cho phần list, bạn có thể sử dụng các thuộc tính trong CSS.
+
+Có 5 thuộc tính trong CSS
+
+Thuộc tính list-style-type cho phép bạn kiểm soát hình dạng hay bề ngoài của Marker (giống như Bullet) chẳng hạn ở dạng hình tròn, hình vuông, hay dạng số, ...
+
+Thuộc tính list-style-position xác định rằng marker nên xuất hiện bên trong hay bên ngoài luồng hiển thị nội dung.
+
+Thuộc tính list-style-image: sử dụng một hình ảnh để làm marker thay cho các bullet hoặc số.
+
+Thuộc tính list-style: sử dụng thuộc tính này, bạn có thể khai báo một lần mà vẫn có thể xác định được tất cả các thuộc tính trên.
+
+Thuộc tính marker-offset xác định khoảng cách giữa một marker và phần text trong danh sách.
+
+Phần tiếp theo trình bày cách sử dụng các thuộc tính trên để tạo style cho danh sách trong CSS.
+
+Thuộc tính list-style-type trong CSS
+Để điều khiển hình dạng (hình tròn, hình vuông, …) của bullet trong trường hợp một danh sách không có thứ tự và style của các ký tự số (số La Mã, số tự nhiên, …) trong trường hợp danh sách đã được sắp xếp, bạn sử dụng thuộc tính list-style-type trong CSS.
+
+Dưới đây là các giá trị có thể được sử dụng cho dạng danh sách không có thứ tự:
+-->
+<!--
+Giá trị	Miêu tả
+none	Không hiển thị
+disc (default)	Một dấu chấm tròn
+circle	Một vòng tròn trống
+square	Một hình vuông
+-->
+<!--
+Dưới đây là các giá trị có thể được sử dụng cho dạng danh sách đã qua sắp xếp:
+
+Giá trị	Miêu tả	Ví dụ
+decimal	Số tự nhiên	1,2,3,4,5
+decimal-leading-zero	Dạng số, bắt đầu từ 01	01, 02, 03, 04, 05
+lower-alpha	Dạng chữ cái thường	a, b, c, d, e
+upper-alpha	Dạng chữ cái hoa	A, B, C, D, E
+lower-roman	Dạng số La Mã thường	i, ii, iii, iv, v
+upper-roman	Dạng số La Mã hoa	I, II, III, IV, V
+lower-greek	Dạng chữ Hy Lạp thường	alpha, beta, gamma
+-->
+<html>
+    <head></head>
+    <body>
+        <ul style="list-style-type: circle;">
+            <li>Java</li>
+            <li>Android</li>
+            <li>C++</li>
+        </ul>
+        
+        <ul style="list-style-type: square;">
+            <li>Java</li>
+            <li>Android</li>
+            <li>C++</li>
+        </ul>
+        
+        <ol style="list-style-type: decimal;">
+            <li>Java</li>
+            <li>Android</li>
+            <li>C++</li>
+        </ol>
+        
+        <ol style="list-style-type: lower-alpha;">
+            <li>Java</li>
+            <li>Android</li>
+            <li>C++</li>
+        </ol>
+        
+        <ol style="list-style-type: lower-roman;">
+            <li>Java</li>
+            <li>Amdroid</li>
+            <li>C++</li>
+        </ol>
+    </body>
+</html>

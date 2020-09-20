@@ -1,0 +1,338 @@
+/*Phần header*/
+/*1 Do các thẻ HTML có một số hiển thị mặc định không cần thiết hoặc hiển thị không giống nhau giữa các trình duyệt (padding và margin), chúng ta sẽ sử dụng CSS để điều chỉnh sao cho các trình duyệt chạy như nhau và bỏ đi một số hiển thị không cần thiết (bỏ list-style cho <ol> và <ul>, bỏ border cho <img />). */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul { list-style: none;}
+/*2 border: none - không có đường viền ảnh
+vertical-align: top - căn lề cao bằng với thành phần cao nhất trong thành phần. */
+img { border: none; vertical-align: top;}
+
+
+/*3 Giả sử giao diện có chiều rộng 900px và canh giữa, ta viết thêm css như sau:
+giá trị auto nên trình duyệt sẽ tự động sắp xếp margin canh đều cho cả 2 bên trái và phải, vì vậy thành phần sẽ nằm giữa. */*/
+div#layout {
+    border: 1px solid #a3a2a3;
+    margin: 20px auto;
+    width: 900px;
+} 
+
+
+/*10 Định dạng lại khoảng cách cho giống design, chúng ta có thể sử dụng margin và padding để làm điều này: */
+div#header {
+    padding: 10px;
+}
+
+
+
+/*5 Phân tích ta sẽ thấy phần header này có nhóm hLeft nằm bên trái, và nhóm hRight nằm bên phải, vì vậy ta sử dụng float: left; cho hLeft và float: right; cho hRight*/
+div.hLeft {
+    float: left;
+}
+
+/*11 Định dạng lại khoảng cách cho giống design, chúng ta có thể sử dụng margin để làm điều này: */
+div.hLeft h1 {
+    margin-bottom: 20px;
+}
+
+div.hRight {
+    float: right;
+}
+
+
+/*7 Ta thấy 2 button bên phải có thể sử dụng thuộc tính display: inline;, vì khi hiển thị là khối nội tuyến ta có thể sử dụng thuộc tính text-align: right; để sắp xếp nội dung 2 button về bên phải, việc này không thể làm được khi sử dụng float.
+Tương tự đối với danh sách link bên dưới ta cũng sử dụng display: inline;. */
+div.hRight ul.hButton {
+    text-align: right;
+    /*11 Định dạng lại khoảng cách cho giống design, chúng ta có thể sử dụng margin để làm điều này: */
+    margin-bottom: 37px;
+}
+
+div.hRight ul.hButton li {
+    display: inline;
+}
+
+div.hRight ul.hNav {
+    text-align: right;
+}
+
+div.hRight ul.hNav li {
+    display: inline;
+    /*8 Các đường thẳng đứng trong danh sách link, ta có thể sử dụng thuộc tính border-right với giá trị solid, và sử dụng padding để canh đều giữa text và border:*/
+    border-right: solid 1px #333;
+    padding: 0 5px;
+}
+
+
+/*9 cuối danh sách link có một border thừa, ta xử lý bằng cách phục hồi dạng border này cho thẻ <li> cuối cùng, đồng thời ta cũng phục hồi phần padding-right thừa. */
+div.hRight ul.hNav li.last { 
+    border-right: none;
+    padding-right: 0;
+}
+
+
+/*6 Do hLeft và hRight sử dụng float nên header xuất hiện vùng không gian trống, vì vậy mà thành phần gNav đủ chỗ để chiếm vùng không gian này, muốn ngăn cản sự chiếm chỗ của gNav chúng ta sử dụng thuộc tính clear: both; cho gNav*/
+div#gNav {
+    clear: both;
+}
+
+
+/*Xong phần header */
+
+
+/*Phần liên kết toàn cục gloabal navigation */
+
+/*1 Phân tích ta sẽ thấy phần global navigation có cấu trúc tương đối giống danh sách link trên header, khác ở chỗ phần gNav này có thêm background hình và border bao ngoài, ta có thể code như sau:*/
+div#gNav ul {
+    background: url(../images/bg_gnav.gif) repeat-x;
+    border: 1px solid #000;
+    /*2 Phần gNav đã tương đối giống với design, chúng ta cần phải thêm chiều cao, kết hợp với padding để đưa danh sách nằm canh giữa (theo chiều dọc), ta code như sau*/
+    height: 22px;
+    padding: 12px 0;
+}
+
+div#gNav ul li {
+    border-right: solid 1px #fff;
+    display: inline;
+    padding: 0 10px;
+}
+
+div#gNav ul li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+/*3 Định dạng màu text, định dạng text đậm và bỏ gạch dưới, chúng ta sẽ sử dụng các thuộc tính color, font-weight: bold; và text-decoration: none; định dạng trực tiếp cho thẻ <a>:*/
+div#gNav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*4 thêm hiệu ứng cho gNav khi hover (di chuyển chuột đổi hiệu ứng), chúng ta có thể định dạng thêm cho thẻ <a>:*/
+div#gNav ul li a:hover {
+    color: blue;
+}
+
+
+/*Phần nội dung-content*/
+
+/*6 Vấn đề còn lại của nhóm Sản phẩm mới là sử dụng padding hoặc margin cho phù hợp để điều chỉnh các khoảng không gian, ta điều chỉnh như sau:*/
+div#pageBody {
+    padding: 20px 10px;
+}
+
+/*1 Phần content nằm bên trái, và phần sidebar nằm bên phải, do đó ta có thể sử dụng thuộc tính float cho 2 nhóm này, đồng thời ta sử dụng width để cả 2 nhóm này có vùng hiển thị đủ chỗ cho nhau.*/
+div#content {
+    float: left;
+    width: 620px;
+}
+
+/*3 Thành phần tiêu đề Sản phẩm mới ta thấy có một border bên dưới, và kích cỡ của text cần chỉnh, ta định dạng như sau:*/
+div#content h2 {
+    border-bottom: 1px solid #666666;
+    font-size: 120%;
+    /*7 Vấn đề còn lại của nhóm Sản phẩm mới là sử dụng padding hoặc margin cho phù hợp để điều chỉnh các khoảng không gian, ta điều chỉnh như sau:*/
+    margin-bottom: 10px;
+}
+
+
+/*12 Sau khi sử dụng thủ thuật trên, chúng ta hoàn toàn có thể điều khiển padding (hoặc margin) giữa nhóm Sản phẩm mới và thumbList dễ dàng:*/
+div#content div.newProduct {
+    margin-bottom: 20px;
+}
+
+
+
+/*4 Phần nội dung bên dưới tiêu đề Sản phẩm mới ta thấy image nằm bên trái và nhóm nội dung nằm bên phải, do đó ta có thể tiếp tục sử dụng thuộc tính float và width cho 2 nhóm này, cũng đừng quên sử dụng clear: both; cho nhóm thumbList bên dưới: */
+div#content div.newProduct p {
+    float: left;
+    width: 241px;
+}
+
+div#content div.newProduct div {
+    float: right;
+    width: 350px;
+}
+
+/*5 Để tô màu cho text Tên sản phẩm ta sử dụng thuộc tính color:*/
+div#content div.newProduct div h3 {
+    color: #5870e6;
+    /*8 Vấn đề còn lại của nhóm Sản phẩm mới là sử dụng padding hoặc margin cho phù hợp để điều chỉnh các khoảng không gian, ta điều chỉnh như sau:*/
+    margin-bottom: 10px;
+}
+
+div#content ul.thumbList {
+    /*9 Vậy là ta đã xong nhóm Sản phẩm mới, chúng ta tiếp tục phần thumbList, ta thấy phần này gồm một danh sách nằm ngang, một background và một border, ta có thể sử dụng float cho danh sách hoặc display: inline; kết hợp với background và border, ta code như sau:*/
+    background: #f9f8f8;
+    border: 1px solid #ebeaea;
+    /*13 Định dạng lại khoảng cách cho phần news:*/
+    clear: both;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+div#content ul.thumbList li {
+    display: inline;
+    padding-right: 13px;
+}
+
+/*14 margin-bottom: 40px; */
+div#content dl.news {
+    padding: 10px 0 40px 10px;
+}
+
+
+/*Phần nội dung còn lại có nội dung đơn giản, chỉ bao gồm bỏ gạch dưới cho link, thêm border-bottom cho bên dưới mỗi list, và định dạng các khoảng cách, chúng ta có thể làm như sau:*/
+div#content dl.news dd {
+    border-bottom: 1px dotted #000; /* tao duong vien ben duoi text */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+
+div#content dl.news dd.last { /* Xoa duong vien va khoang khong gian cho danh sach cuoi */
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+div#content dl.news dd a { /* bo gach duoi cho link */
+    text-decoration: none;
+}
+
+
+div#content dl.news dd a:hover { /* khi hover se xuat hien gach duoi */
+    text-decoration: underline;
+}
+
+
+/*end Phần còn lại của content chỉ là canh giữa cho banner cuối:*/
+div#content p.banner {
+    text-align: center;
+}
+
+
+div#sidebar {
+    float: right;
+    width: 240px;
+}
+
+/*2 Do 2 nhóm content và sidebar sử dụng float, nên nếu còn vị trí trống thì thành phần footer lập tức chiếm chỗ, để không xảy ra sự chiếm chỗ này, chúng ta sẽ sử dụng thuộc tính clear: both; cho footer:*/
+div#footer {
+    border-top: 1px solid #a3a2a3;
+    padding: 10px;
+    clear: both;
+}
+
+
+/*10 Chúng ta không thể điều khiển khoảng cách giữa nhóm Sản phẩm mới và thumbList, lý do là nhóm Sản phẩm mới đã sử dụng float, vùng không gian đã không còn, do đó cái mốc tính padding (hay margin) của thumbList bây giờ được tính từ bên trên cùng của image trong Sản phẩm mới, để trả về vùng không gian cho Sản phẩm mới, chúng ta sử dung một thủ thật clearfix sau: */
+div#content div.newProduct {
+    /*11 Trình duyệt Internet Explorer phiên bản 6 và 7 hiển thị không giống như các trình duyệt khác, chúng ta sẽ sử dụng thuộc tính zoom: 1; để trình duyệt Internet Explorer phiên bản 6 và 7 hiển thị như các trình duyệt khác.*/
+    zoom: 1;
+}
+
+div#content div.newProduct:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
+/* Phần sidebar*/
+/* Phân tích ta sẽ thấy <h2> có dạng giống như phần content, do đó ta có thể sử dụng lại code của phần content, ta code như sau:*/
+div#sidebar h2 {
+    border-bottom: 1px solid #666;
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+
+div#sidebar ul.linkList {
+    padding: 0 0 30px 10px;
+}
+
+
+/*Phần linkList có cấu trúc danh sách với icon bên trái, ta có thể sử dụng thuộc tính background để định dạng:*/
+div#sidebar ul.linkList li {
+    background: url(../images/ico_arrow.gif) no-repeat left center;/* Background khong lap */
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+
+div#sidebar ul.bannerList {
+    padding-top: 10px;
+}
+
+div#sidebar ul.bannerList li {
+    padding-bottom: 5px;
+}
+
+
+/*Phần footer*/
+
+div#footer div.fLeft {
+    float: left;
+    width: 340px;
+}
+
+div#footer div.fRight {
+    float: right;
+    margin-top: 40px;
+    width: 530px;
+}
+
+
+div#footer div.fRight ul {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+div#footer div.fRight ul li {
+    display: inline;
+    border-right: solid 1px #333;
+    padding-right: 0;
+}
+
+
+div#footer div.fRight ul li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+
+div#footer div.fRight p {
+    text-align: right;
+}
+
+/*Sử dụng thủ thuật clearfix cho footer:*/
+div#footer {
+    zoom: 1;
+}
+
+div#footer:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+div#pageBody {
+    zoom: 1;
+}
+
+div#pageBody:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}

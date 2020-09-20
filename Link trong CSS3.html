@@ -1,0 +1,94 @@
+<!--
+Thiết lập màu cho Link trong CSS
+Để thiết lập màu cho Link, bạn sử dụng thuộc tính color trong CSS. Như đã trình bày trong chương Màu trong CSS, giá trị của thuộc tính color này có thể là tên màu hoặc một giá trị Hex Code, …
+
+<html>
+   <head>
+      <style type="text/css">
+         a:link {color:#000000}
+     </style>
+   </head>
+   <body>
+      <a href="">Click vao link nay</a>
+   </body>
+</html> 
+Kết quả là:
+
+
+Thiết lập màu cho Visited Link trong CSS
+Trạng thái :visited chỉ rằng đường link này đã được lưu bởi trình duyệt. Để thiết lập màu cho loại đường này, bạn theo dõi ví dụ sau:
+
+<html>
+   <head>
+      <style type="text/css">
+         a:visited {color: #006600}
+      </style>
+   </head>
+   <body>
+      <a href=""> Click vao link nay</a> 
+   </body>
+</html> 
+Khi bạn click vào đường link này, màu của link sẽ chuyển sang màu xanh lá cây.
+
+
+Thay đổi màu cho Link khi Di chuyển chuột qua
+Với trường hợp này, bạn sử dụng trạng thái :hover. Nên ghi nhớ rằng, trong phần định nghĩa CSS, để đường Link này có thể hoạt động, bạn nên đặt trạng thái này sau hai trạng thái :link và :visited. Tuy nhiên, để cho đơn giản thì trong ví dụ sau mình thực hiện như sau:
+
+<html>
+   <head>
+      <style type="text/css">
+         a:hover {color: #FFCC00}
+      </style>
+   </head>
+   <body>
+      <a href="">Click vao link nay</a>
+   </body>
+</html> 
+Khi bạn di chuyển chuột qua đường link trên, màu link sẽ chuyển sang màu vàng.
+
+
+QUẢNG CÁO
+Thay đổi màu cho Actived Link trong CSS
+Để biểu thị một link nào đó đang active, bạn có thể thay đổi màu của link đó sang một màu khác chẳng hạn. Để thiết lập trạng thái này, bạn sử dụng :active trong CSS. Ví dụ sau minh họa cách thay đổi màu cho Actived Link bởi sử dụng thuộc tính color trong CSS.
+
+<html>
+   <head>
+      <style type="text/css">
+         a:active {color: #FF00CC}
+      </style>
+   </head>
+   <body>
+      <a href="">Click vao link nay</a>
+   </body>
+</html> 
+Khi bạn click chuột vào link này, màu của link sẽ chuyển sang màu hồng.
+-->
+
+<!--
+Sử dụng thuộc tính text-decoration với Link trong CSS
+Nếu bạn để ý các ví dụ trên, bạn sẽ thấy rằng các đường link trên đều có dấu gạch chân bên dưới. Vậy làm cách nào để làm biến mất dấu gạch chân này cho đường link, bạn sử dụng thuộc tính text-decoration với giá trị là none. (Bạn tham khảo chương Text trong CSS để có các giá trị cho thuộc tính này)
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link {
+                text-decoration: none;
+            }
+            a:visited{
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            a:active{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <p><b><a href="https:/fb.com/xuancanhit99" target="_blank">xuancanhit99</a></b></p>
+        <p><b>Note:</b> a:hover MUST come after a:link and a a:visited in the CSS definition in order to be effective.</p>
+        <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+    </body>
+</html>

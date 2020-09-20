@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Thuộc tính border trong CSS giúp bạn xác định style, độ rộng và màu của đường viền bao quanh một phần tử. Tương ứng, bạn sẽ có ba thuộc tính sau giúp bạn thực hiện việc này:
+
+Thuộc tính border-color xác định màu của đường viền.
+
+Thuộc tính border-style giúp bạn xác định xem đường viền nên là solid, dashed, double, …
+
+Thuộc tính border-width giúp bạn xác định độ rộng của đường viền.
+
+Phần tiếp theo, mình sẽ trình bày chi tiết từng thuộc tính cũng như các giá trị có thể của mỗi thuộc tính này trong CSS.
+
+Thuộc tính border-color trong CSS
+Để xác định màu cho đường viền trong CSS, bạn sử dụng thuộc tính border-color. Ngoài việc xác định màu cho toàn bộ đường viền bao quanh phần tử, bạn cũng có thể xác định riêng rẽ màu cho từng phần của đường viền, chẳng hạn như phần trên, đáy, cạnh trái hoặc cạnh phải. Tùy theo mục đích, bạn sử dụng một trong các thuộc tính sau đây.
+
+Thuộc tính border-bottom-color giúp bạn thay đổi màu của đáy đường viền.
+
+Thuộc tính border-top-color giúp bạn thay đổi màu của phần trên đường viền.
+
+Thuộc tính border-left-color giúp bạn thay đổi màu của cạnh trái đường viền.
+
+Thuộc tính border-right-color giúp bạn thay đổi màu của cạnh phải đường viền.
+
+Các thuộc tính trên có thể nhận giá trị màu hợp lệ (bạn tham khảo chương Màu trong CSS), Ví dụ sau minh họa cách sử dụng các thuộc tính này trong CSS.
+-->
+<html>
+    <head>
+        <title>
+            Border trong CSS
+        </title>
+        <style>
+            p.example1 {
+                border: 1px solid;
+                border-bottom-color: green;
+                border-top-color: red;
+                border-left-color: black;
+                border-right-color: blue;
+            }
+            p.example2 {
+                border:1px solid; 
+                border-color: green;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <p class="example1">
+            Ví dụ hiển thị border với các màu khác nhau trên các cạnh 
+        </p>
+        <p class="example2">
+            Ví dụ hiểm thị border với màu duy nhất trên tất cả các cạnh
+        </p>
+    </body>
+</html>

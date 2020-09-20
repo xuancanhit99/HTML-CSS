@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Phân biệt Outline và Border
+Nhắc đến Outline có thể khiến một số bạn nhầm lẫn nó với Border, tuy nhiên giữa hai thuộc tính này có các điểm khác nhau khá lớn như sau:
+
+Một outline là một đường được vẽ ngay bên ngoài cạnh đường viền của các phần tử. Các Outline không chiếm giữ phần không gian, bởi vì chúng luôn luôn được đặt trên một hộp chứa phần tử.
+
+Không giống border, bạn không thể xác định độ rộng, màu và style cho từng cạnh khác nhau bởi vì outline là một đường.
+
+Không giống border, outline không thay đổi kích cỡ và vị trí của phần tử.
+
+Outline không nhất thiết phải ở dạng hình chữ nhật.
+
+Ghi chú: Các thuộc tính liên quan tới outline không được hỗ trợ bởi IE 6 và Netscape 7.
+
+Liên quan tới outline, trong CSS bạn có thể xác định các thuộc tính sau:
+
+Thuộc tính outline-width xác định độ rộng của outline.
+
+Thuộc tính outline-style xác định line style cho outline.
+
+Thuộc tính outline-color xác định màu của outline.
+
+Thuộc tính outline để xác định tất cả thuộc tính của outline trên.
+
+Thuộc tính outline-width trong CSS
+Thuộc tính outline-width xác định độ rộng của outline. Giá trị của thuộc tính này nên ở dạng độ dài (đơn vị pt, px, cm, …) hoặc một trong các giá trị thin, medium, hoặc thick, khá giống với thuộc tính border-width trong CSS.
+
+Nếu bạn xác định giá trị 0px cho thuộc tính này, tức là bạn đã xác định rằng phần tử này không có outline.
+
+Dưới đây là ví dụ minh họa cách sử dụng thuộc tính outline-width trong CSS.
+-->
+<html>
+    <head><title>outline trong CSS</title></head>
+    <body>
+        <p style="outline-width: thin; outline-style: solid;">
+            Thuộc tính outline có giá trị thin.
+        </p>
+        <br />
+        
+        <p style="outline-width: thick; outline-style: solid;">
+            Thuộc tính outline có giá trị thick
+        </p>
+        <br />
+        
+        <p style="outline-width: 5px; outline-style: solid;">
+            Outline có độ rộng 5 pixel
+        </p>
+    </body>
+</html>

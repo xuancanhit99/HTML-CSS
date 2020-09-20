@@ -1,0 +1,114 @@
+<!--
+Đến chương này, chúng ta đã biết cách tạo style cho border xung quanh mỗi phần tử, cho phần padding bên trong mỗi hộp và căn lề xung quanh chúng, …. Tiếp theo chúng ta cùng tìm hiểu cách thay đổi kích cỡ của các hộp trong CSS.
+
+Để thay đổi kích cỡ, bạn có thể sử dụng các thuộc tính trong CSS sau:
+
+Thuộc tính height xác định chiều cao của hộp.
+
+Thuộc tính width xác định độ rộng của hộp.
+
+Thuộc tính line-height xác định chiều cao của một dòng văn bản.
+
+Thuộc tính max-height thiết lập chiều cao tối đa của một hộp.
+
+Thuộc tính min-height thiết lập chiều cao tối thiểu của một hộp.
+
+Thuộc tính max-width thiết lập độ rộng tối thiểu của một hộp.
+
+Thuộc tính min-width thiết lập độ rộng tối thiểu của một hộp.
+
+Các thuộc tính height và width trong CSS
+Hai thuộc tính height và width giúp bạn xác định chiều cao và độ rộng cho các hộp. Các thuộc tính này có thể nhận các giá trị dạng chiều dài (đơn vị px, pt, cm, …), dạng phần trăm, hoặc từ khóa auto.
+
+Ví dụ sau minh họa cách thiết lập chiều cao và độ rộng của một hộp bởi sử dụng thuộc tính height và width trong CSS.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Kích cỡ trong CSS
+        </title>
+    </head>
+    <body>
+        <p style="width: 400px; height: 100px; border: 1px solid blue; padding: 5px; margin: 10px;">
+            Đoạn văn này có độ rộng là 400 pixel và chiều cao là 100 pixel 
+        </p>
+        
+        <!--
+        Thuộc tính line-height trong CSS
+Thuộc tính line-height cho phép bạn tăng phần không gian giữa các dòng văn bản. Thuộc tính này có thể nhận giá trị dạng chiều dài (đơn vị px, pt, cm, …), dạng phần trăm.
+
+Ví dụ sau minh họa cách sử dụng thuộc tính line-height trong CSS.
+   -->
+        <p style="width: 400px; height: 100px; border: 1px solid red; padding: 5px; margin: 10px; line-height: 30px;">
+            Đoạn văn có độ rộng là 400px và chiều cao là 10px. Trong đó, line-height là 30px
+            Đoạn văn có độ rộng là 400px và chiều cao là 10px. Trong đó, line-height là 30px
+            (bạn tham khảo thuộc tính line-heght trong chương tổng hợp thuộc tính trong CSS)
+        </p>
+        <br />
+        <br />
+        
+        <!--
+        Thuộc tính max-height trong CSS
+Để xác định chiều cao tối đa cho một hộp, bạn có thể sử dụng thuộc tính max-height trong CSS. Thuộc tính này có thể nhận giá trị dạng chiều dài (đơn vị px, pt, cm, …), dạng phần trăm.
+
+Ghi chú: IE 6 và Netscape không hỗ trợ thuộc tính này.
+
+Ví dụ sau minh họa cách thiết lập chiều cao tối đa cho một hộp bởi sử dụng thuộc tính max-height trong CSS.
+   -->
+        <p style="width: 400px; max-height: 10px; border: 1px solid red; padding: 5px; margin: 10px;">
+            Đoạn văn có độ rộng là 400px và chiều cao là 10px
+            Đoạn văn có độ rộng là 400px và chiều cao là 10px
+            Đoạn văn có độ rộng là 400px và chiều cao là 10px
+            Đoạn văn có độ rộng là 400px và chiều cao là 10px
+        </p>
+        <br />
+        <br />
+        <br />
+        <img alt="logo" src="images/bnr_name01.gif" width="195" height="84" />
+        
+        <!--
+        Thuộc tính min-height trong CSS
+Để xác định chiều cao tối thiểu cho một hộp, bạn có thể sử dụng thuộc tính min-height trong CSS. Thuộc tính này có thể nhận giá trị dạng chiều dài (đơn vị px, pt, cm, …), dạng phần trăm.
+
+Ghi chú IE 6 và Netscape không hỗ trợ thuộc tính này.
+
+Ví dụ sau minh họa cách thiết lập chiều cao tối thiểu cho một hộp bởi sử dụng thuộc tính min-height trong CSS.
+   -->
+        <p style="width: 400px; min-height: 200px; border: 1px solid red; padding: 5px; margin: 10px;">
+            Đoạn văn có độ rộng là 400 px và chiều cao tối thiểu(min height) là 200px
+            Đoạn văn có độ rộng là 400 px và chiều cao tối thiều(min heighr) là 200px
+            Đoạn văn có độ rộng là 400 px và chiều cao tối thiểu(min height) là 200px
+        </p>
+        <img alt="logo" src="images/bnr_name02.gif" width="95" height="84" />
+        
+        <!--
+        Thuộc tính max-width trong CSS
+Để xác định độ rộng tối đa cho một hộp, bạn có thể sử dụng thuộc tính max-width trong CSS. Thuộc tính này có thể nhận giá trị dạng chiều dài (đơn vị px, pt, cm, …), dạng phần trăm.
+
+Ghi chú: IE 6 và Netscape không hỗ trợ thuộc tính này.
+
+Ví dụ sau minh họa cách thiết lập độ rộng tối đa cho một hộp bởi sử dụng thuộc tính max-width trong CSS.
+       -->
+        <p style="max-width: 100px; height: 200px; border: 1px solid red; padding: 5px; margin: 10px;">
+            Đoạn văn có chiều cao là 200px và độ rộng tối đa(max width) là 100px
+            Đoạn văn có chiều cao là 200px và độ rộng tối đa(max width) là 100px
+        </p>
+        <img alt="logo" src="images/bnr_name04.gif" width="95" height="84 " />
+        
+        <!--
+        Thuộc tính min-width trong CSS
+Để xác định độ rộng tối thiểu cho một hộp, bạn có thể sử dụng thuộc tính min-width trong CSS. Thuộc tính này có thể nhận giá trị dạng chiều dài (đơn vị px, pt, cm, …), dạng phần trăm.
+
+Ghi chú: IE 6 và Netscape không hỗ trợ thuộc tính này.
+
+Ví dụ sau minh họa cách thiết lập độ rộng tối thiểu cho một hộp bởi sử dụng thuộc tính min-width trong CSS.
+       -->
+        <p style="min-width: 400px; height: 100px; border: 1px solid red; padding: 5px; margin: 10px;">
+            Đoạn văn có chiều cao là 100px và độ rộng tối thiểu(min width) là 400px.
+            Đoạn văn có chiều cao là 100px và độ rộng tối thiểu(min width) là 400px.
+        </p>
+        
+   
+    </body>
+</html>

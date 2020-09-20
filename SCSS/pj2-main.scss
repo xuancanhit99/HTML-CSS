@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvertica;
+}
+
+/*-------MENU--------*/
+nav {
+    margin: 0;
+    padding: 0;
+    background: #7d7d7d;
+    overflow: hidden; /*Khi bị tràn nội dung sẽ được ẩn đi*/
+    font-size: 18px;
+    .side-nav {
+        a {
+            display: inline-block;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                background-color: #009688;
+            }
+            &.close {
+                display: none;
+            }
+        }
+    }
+    i.fa {
+        position: absolute;
+        right: 10px;
+        margin: 8px 10px;
+        color: #fff;
+        font-size: 30px;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        &.mobile-mod {
+            text-align: center;
+            z-index: 1;
+            overflow: auto;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            .side-nav {
+                display: block;
+                a {
+                    display: block;
+                    color: #009688;
+                    &.close {
+                        font-weight: bold;
+                        display: block;
+                        i {
+                            position: relative;
+                            display: inline-block;
+                            color: #009688;
+                            font-size: 20px;
+                        }
+                    }
+                    &:hover {
+                        background-color: #DBDBDB;
+                    }
+                }
+                
+            }
+        }
+        
+        .side-nav {
+            height: 45px;
+            a {
+                display: none;
+            }
+        }
+        
+        i.fa {
+            display: block;
+            right: 0;
+        }
+    }
+}

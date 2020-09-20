@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Để làm cho hình ảnh đẹp hơn, bạn có thể sử dụng các thuộc tính trong CSS. CSS có các thuộc tính:
+
+Thuộc tính border: Thiết lập độ rộng của đường viền bao quanh hình ảnh.
+
+Thuộc tính height: Thiết lập chiều cao của hình ảnh.
+
+Thuộc tính width: Thiết lập độ rộng của hình ảnh.
+
+Thuộc tính –moz-opacity: thiết lập độ trong suốt của hình ảnh.
+-->
+<html>
+    <head>
+        <title>
+            Hiệu ứng hình ảnh trong CSS
+        </title>
+    </head>
+    <body>
+       <!--
+       Thuộc tính border trong CSS
+Để thiết lập độ rộng của đường viền bao quanh hình ảnh, bạn sử dụng thuộc tính border trong CSS. Thuộc tính này có thể nhận giá trị: độ dài đo bằng px hoặc %..
+
+Nếu thiết lập giá trị là 0px, nghĩa là hình ảnh của bạn không có đường viền bao quanh.
+       -->
+        <img style="border: 0px;" src="images/bnr_name01.gif" />
+        <br />
+        <img style="border: 3px dashed red;" src="images/bnr_name02.gif" />
+        <br />
+        
+        <!--
+        Thuộc tính height trong CSS
+Để điều khiển chiều cao của hình ảnh hiển thị trong Webpage, bạn có thể sử dụng thuộc tính height trong CSS. Thuộc tính này có thể nhận giá trị: chiều cao đo bằng px hoặc %. Nếu được xác định bằng đơn vị %, chiều cao của hình ảnh sẽ được tính tỷ lệ với khối chứa hình ảnh đó.
+   -->
+        <img style="border: 1px solid red; height: 100px;" src="images/bnr_name03.gif" />
+        <br />
+        <img style="border: 1px solid red; height: 50%" src="images/btn_name02.gif" />
+        <br />
+        
+        <!--
+        Thuộc tính width trong CSS
+Để xác định độ rộng của hình ảnh, bạn có thể sử dụng thuộc tính width trong CSS. Thuộc tính này có thể nhận giá trị: độ rộng đo bằng px hoặc %. Nếu được xác định bằng đơn vị %, độ rộng của hình ảnh sẽ được tính tỷ lệ với khối chứa hình ảnh đó.
+   -->
+        <img style="border: 1px solid red; width: 150px;" src="images/img_logo.gif" />
+        <br />
+        <img style="border: 1px solid red; width: 100%" src="images/img_products01.jpg" />
+        <br />
+        
+        <!--
+        Thuộc tính - moz-opacity trong CSS
+Thuộc tính -moz-opacity trong CSS được sử dụng để thiết lập độ trong suốt của hình ảnh. Trong Mozilla, thuộc tính này sẽ tạo một hình ảnh trong suốt. IE sử dụng filter:alpha(opacity=x) để tạo các hình ảnh trong suốt.
+
+Trong Mozilla: với cú pháp -moz-opacity=x thì x có thể là một giá trị từ 0.0 – 1.0. Giá trị càng nhỏ thì càng làm tăng độ trong suốt. (tương tự như cú pháp trong CSS3 là: opacity:x).
+
+Trong IE: với cú pháp filter:alpha(opacity=x) thì x có thể là một giá trị từ 0 – 100. Giá trị càng nhỏ thì càng làm tăng độ trong suốt.
+       -->
+        <img style="border: 1px solid red; -moz-opacity:0.4; filter: alpha(opacity(40);" src="anhdong.gif" />
+        
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!--
+Thuộc tính list-style-position trong CSS
+Để xác định xem marker nên hiển thị ở bên trong hay bên ngoài luồng hiển thị nội dung, bạn sử dụng thuộc tính list-style-position trong CSS.
+
+Thuộc tính này có thể nhận giá trị: none, inside hoặc outside.
+-->
+<html>
+    <head>
+        <title>List trong CSS</title>
+    </head>
+    <style>
+        ul.t1 {
+            list-style-type: circle;
+            list-style-position: outside;
+        }
+        
+        ul.t2 {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+        
+        ol.t1 {
+            list-style-type: decimal;
+            list-style-position: outside;
+        }
+        
+        ol.t2 {
+            list-style-type: lower-alpha;
+            list-style-position: inside;
+        }
+    </style>
+    <body>
+        <ul class="t1">
+            <li>Java</li>
+            <li>Andorid</li>
+            <li>C++</li>
+        </ul>
+        <ul class="t2">
+            <li>Java</li>
+            <li>Android</li>
+            <li>C++</li>
+        </ul>
+        <ol class="t1">
+            <li>Java</li>
+            <li>Andorid</li>
+            <li>C++</li>
+        </ol>
+        <ol class="t2">
+            <li>Java</li>
+            <li>Adroid</li>
+            <li>C++</li>
+        </ol>
+    </body>
+</html>

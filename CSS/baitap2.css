@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+div#nenweb {
+    border: 1px solid #a3a2a3;
+    margin: 20px auto;
+    width: 900px;
+}
+
+div#dau {
+    padding: 10px;
+}
+
+div.dautrai {
+    float: left;
+}
+
+div.dautrai p {
+    padding-bottom: 3px;
+}
+
+div.dauphai {
+    float: right;
+}
+
+div#thanhtc {
+    clear: both;
+}
+
+div.dauphai ul.nut {
+    text-align: right;
+    margin-bottom: 37px;
+}
+
+div.dauphai ul.nut li {
+    display: inline;
+}
+
+div.dauphai ul.link {
+    text-align: right;
+}
+
+div.dauphai ul.link li {
+    display: inline;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+}
+
+div.dauphai ul.link li.cuoi {
+    border-right: none;
+    padding-right: 0;
+}
+
+div.dautrai h1 {
+    margin-bottom: 20px;
+}
+
+
+
+div#thanhtc ul {
+    background:  url(../images/bg_gnav.gif) repeat-x; 
+    border: 1px solid #000;
+    height: 22px; 
+    padding: 12px 0;
+}
+
+div#thanhtc ul li {
+    border-right: solid 1px #fff;
+    display: inline;
+    padding: 0 10px;
+}
+
+div#thanhtc ul li.cuoi {
+    border-right: none;
+    padding-right: 0;
+}
+
+div#thanhtc ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#thanhtc ul li a:hover {
+    color: blue;
+}
+
+div#thanchinh {
+    padding: 20px 10px;
+}
+
+div#noidung {
+    float: left;
+    width: 600px;
+}
+
+div#chan {
+    clear: both;
+    padding: 10px;
+    border-top: 1px solid #a3a2a3;
+}
+
+div#noidung h2 {
+    border-bottom: 1px solid #666;
+    font-size: 120%;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+div#noidung div.spm p {
+    float: left;
+    width: 280px;
+}
+
+div#noidung div.spm div {
+    float: right;
+    width: 320px;
+}
+
+div#noidung div.spm div p {
+    width: 310px;
+}
+
+div#noidung div.spm div h3 {
+    color: #5870e6;
+    margin-bottom: 10px;
+}
+
+div#noidung ul.anh li {
+    display: inline;
+    padding: 10px 0 40px 8px;
+}
+
+/*clearfix*/
+div#noidung div.spm:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+div#noidung div.spm {
+    margin-bottom: 20px;
+}
+
+
+div#noidung ul.anh {
+    background: #f9f8f8;
+    border: 1px solid #ebeaea;
+    clear: both;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+div#noidung dl.tintuc {
+    padding: 10px 0 40px 10px;
+}
+
+div#noidung dl.tintuc dd {
+    border-bottom: 1px dotted #000;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+div#noidung dl.tintuc dd.cuoi {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+div#noidung dl.tintuc dd a {
+    text-decoration: none;
+}
+
+div#noidung dl.tintuc dd a:hover {
+    text-decoration: underline;
+}
+
+div#noidung p.banner {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+div#thanhben {
+    float: right;
+    width: 250px;
+}
+
+div#thanhben h2 {
+    border-bottom: 1px solid #666;
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+div#thanhben ul.linklist {
+    padding: 0 0 30px 10px;
+}
+
+div#thanhben ul.linklist li {
+    background: url(../images/ico_arrow.gif) no-repeat left center;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+
+
+div#thanhben ul.bannerlist {
+    padding-top: 10px;
+}
+
+div#thanhben ul.bannerlist li {
+    padding-bottom: 5px;
+}
+
+
+
+div#chan div.chantrai {
+    float: left;
+    width: 340px;
+}
+
+div#chan div.chanphai {
+    float: right;
+    width: 530px;
+}
+
+div#chan div.chanphai ul {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+div#chan div.chanphai ul li {
+    display: inline;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+}
+
+div#chan div.chanphai p {
+    text-align: right;
+}
+
+div#chan div.chanphai ul li.cuoi {
+    border-right: 0;
+    padding-right: 0;
+}
+/*clearfix*/
+div#chan {
+    zoom: 1;
+}
+
+div#chan:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
